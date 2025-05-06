@@ -50,7 +50,7 @@ class ActivityMonitoring(commands.Cog):
             return await ctx.send(
                 embed=discord.Embed(
                     title="Not Enabled",
-                    description="Shift Logging is not enabled on this server.",
+                    description="Shift Logging is not enabled on this server. \n \n **NOTE:** Use ERM (/) commands to manage your shift.",                    
                     color=BLANK_COLOR,
                 )
             )
