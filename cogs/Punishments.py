@@ -275,6 +275,7 @@ class Punishments(commands.Cog):
                     f'{"> **Until:** <t:{}>{}".format(int(warning.until_epoch), newline) if warning.until_epoch is not None else ""}'
                     f"> **ID:** `{warning.snowflake}`\n"
                     f"> **Custom Flags:** {'`N/A`' if len(flags) == 0 else '{}'.format(', '.join(flags))}"
+                    f"> **NOTICE:** THIS DOES NOT LOG TO ERM! THIS IS FOR THIS VERSION OF ERM ONLY, AND DOES NOT LOG TO THE USER!"
                 ),
                 inline=False,
             )
