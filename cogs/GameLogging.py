@@ -76,7 +76,7 @@ class GameLogging(commands.Cog):
             return await ctx.send(
                 embed=discord.Embed(
                     title="Not Enabled",
-                    description="Staff Requests are not enabled within this server.",
+                    description="Staff Requests are not enabled within this server. \n \n **NOTE:** Use ERM (/) commands to request staff!",
                     color=BLANK_COLOR,
                 )
             )
