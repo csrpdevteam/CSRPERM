@@ -7,7 +7,6 @@ import pytz
 from decouple import config
 from discord import app_commands
 from discord.ext import commands
-
 from datamodels.ShiftManagement import ShiftItem
 from erm import (
     credentials_dict,
@@ -42,7 +41,7 @@ class ShiftLogging(commands.Cog):
 
     @commands.hybrid_group(
         name="duty"
-    ) # hey, maybe dont delete this next time noagonzales.
+    ) 
     async def duty(self, ctx):
         pass
     
@@ -72,7 +71,7 @@ class ShiftLogging(commands.Cog):
 
         configItem = await bot.settings.find_by_id(ctx.guild.id)
         if not configItem.get("shift_management", {}).get("enabled", False):
-            return await new_failure_embed(ctx, "Not Enabled", "Shift Logging is not enabled on this server.")
+            return await new_failure_embed(ctx, "Not Enabled", "Shift Logging is not enabled on this server. \n \n **NOTE:** Use ERM (/) commands to manage your shift.")
 
         shift_types = configItem.get("shift_types", {}).get("types", [])
         selected_shift_type = None
@@ -177,7 +176,7 @@ class ShiftLogging(commands.Cog):
             return await ctx.send(
                 embed=discord.Embed(
                     title="Not Enabled",
-                    description="Shift Logging is not enabled on this server.",
+                    description="Shift Logging is not enabled on this server. \n \n **NOTE:** Use ERM (/) commands to manage your shift.",
                     color=BLANK_COLOR,
                 )
             )
@@ -380,7 +379,7 @@ class ShiftLogging(commands.Cog):
             return await ctx.send(
                 embed=discord.Embed(
                     title="Not Enabled",
-                    description="Shift Logging is not enabled on this server.",
+                    description="Shift Logging is not enabled on this server. \n \n **NOTE:** Use ERM (/) commands to manage your shift.",
                     color=BLANK_COLOR,
                 )
             )
@@ -624,7 +623,7 @@ class ShiftLogging(commands.Cog):
             return await ctx.send(
                 embed=discord.Embed(
                     title="Not Enabled",
-                    description="Shift Logging is not enabled on this server.",
+                    description="Shift Logging is not enabled on this server. \n \n **NOTE:** Use ERM (/) commands to manage your shift.",
                 )
             )
 
@@ -835,7 +834,7 @@ class ShiftLogging(commands.Cog):
             return await ctx.send(
                 embed=discord.Embed(
                     title="Not Enabled",
-                    description="Shift Logging is not enabled on this server.",
+                    description="Shift Logging is not enabled on this server. \n \n **NOTE:** Use ERM (/) commands to view your shift and leaderboard.",
                 )
             )
 
@@ -1340,7 +1339,7 @@ class ShiftLogging(commands.Cog):
             return await ctx.send(
                 embed=discord.Embed(
                     title="Not Enabled",
-                    description="Shift Logging is not enabled on this server.",
+                    description="Shift Logging is not enabled on this server. \n \n **NOTE:** Use ERM (/) commands to manage your shift.",
                 )
             )
 
