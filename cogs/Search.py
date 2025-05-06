@@ -178,7 +178,7 @@ class Search(commands.Cog):
                 )
             )
 
-            embed_list[0].set_footer("NOTE: This is for the TESTING version of ERM. Changes do not reflect the user's actual moderation history.")
+            embed_list[0].set_footer(text="NOTE: This is for the TESTING version of ERM. Changes do not reflect the user's actual moderation history.")
 
             embed_list[0].add_field(
                 name="Staff Information",
@@ -349,7 +349,7 @@ class Search(commands.Cog):
 
         g_id = 965829463512330260
         
-        guild: discord.Guild = bot.get_guild(guild_id)
+        guild: discord.Guild = bot.get_guild(g_id)
         applied_flags = set()  # use set to automatically remove duplicates
         member: None | StaffConnection = await bot.staff_connections.fetch_by_spec(
             roblox_id=roblox_player.id
@@ -418,7 +418,7 @@ class Search(commands.Cog):
             inline=False,
         )
 
-        embed_list[0].set_footer("NOTE: This is for the TESTING version of ERM. Changes do not reflect the user's actual moderation history.")
+        embed_list[0].set_footer(text="NOTE: This is for the TESTING version of ERM. Changes do not reflect the user's actual moderation history.")
 
         # # # print(result)
         def add_warning_field(warning):
