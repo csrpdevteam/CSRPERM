@@ -154,7 +154,7 @@ class ActivityCoreCommands:
             await ctx.send(
                 embed=discord.Embed(
                     title="Not Enabled",
-                    description=f"{request_type_object.upper()} Requests are not enabled on this server.",
+                    description=f"{request_type_object.upper()} Requests are not enabled on this server. \n \n **NOTE:** Use ERM (/) commands to manage your {request_type_object.upper()}.",
                     color=BLANK_COLOR,
                 )
             )
@@ -483,7 +483,7 @@ class ActivityCoreCommands:
             await ctx.send(
                 embed=discord.Embed(
                     title="Not Enabled",
-                    description=f"{request_type_object.upper()} Requests are not enabled on this server.",
+                    description=f"{request_type_object.upper()} Requests are not enabled on this server. \n \n **NOTE:** Use ERM (/) commands to manage your {request_type_object.upper()}.",
                     color=BLANK_COLOR,
                 )
             )
@@ -602,7 +602,7 @@ class ActivityCoreCommands:
             await ctx.send(
                 embed=discord.Embed(
                     title="Not Enabled",
-                    description=f"{request_type_object.upper()} Requests are not enabled on this server.",
+                    description=f"{request_type_object.upper()} Requests are not enabled on this server. \n \n **NOTE:** Use ERM (/) commands to manage your {request_type_object.upper()}.",
                     color=BLANK_COLOR,
                 )
             )
@@ -674,7 +674,7 @@ class ActivityCoreCommands:
             await ctx.send(
                 embed=discord.Embed(
                     title="Not Enabled",
-                    description=f"{request_type_object.upper()} Requests are not enabled on this server.",
+                    description=f"{request_type_object.upper()} Requests are not enabled on this server. \n \n **NOTE:** Use ERM (/) commands to manage your {request_type_object.upper()}.",
                     color=BLANK_COLOR,
                 )
             )
