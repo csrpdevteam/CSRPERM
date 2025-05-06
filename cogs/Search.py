@@ -48,7 +48,7 @@ class Search(commands.Cog):
             user = ctx.author
         guild_id = ctx.guild.id
         if guild_id == 823606319529066548:
-            guild_id = 1015622817452138606
+            guild_id = 965829463512330260
         if self.bot.punishments_disabled is True:
             return await failure_embed(
                 ctx,
@@ -85,20 +85,20 @@ class Search(commands.Cog):
         embed_list = [player_information_embed, punishments_embed]
 
         magic_flags = {
-            "ERM Team": 1001972346661384302,
-            "ERM Developer": 1046204873496068176,
-            "ERM Management": 1038597868023447552,
-            "ERM Senior Support": 1028848687927013396,
-            "ERM Support": 1053417531278364713,
-            "ERM Staff": 988055417907200010,
-            "ERM Quality Assurance": 1306431506914218067,
+            "ERM Team": 1360421511651135490,
+            "ERM Developer": 1360421511651135490,
+            "ERM Management": 1360421511651135490,
+            "ERM Senior Support": 1360421511651135490,
+            "ERM Support": 1360421511651135490,
+            "ERM Staff": 1360421511651135490,
+            "ERM Quality Assurance": 1360421511651135490,
         }
 
         magic_flags_reverse = {
             v: k for k, v in magic_flags.items()
         }  # this is reverse mapping for quick lookup
 
-        g_id = 987798554972143728
+        g_id = 965829463512330260
         guild: discord.Guild = bot.get_guild(g_id)
         applied_flags = set()  # use set to automatically remove duplicates
         member: None | StaffConnection = await bot.staff_connections.fetch_by_spec(
@@ -177,6 +177,8 @@ class Search(commands.Cog):
                     ],
                 )
             )
+
+            embed_list[0].set_footer("NOTE: This is for the TESTING version of ERM. Changes do not reflect the user's actual moderation history.")
 
             embed_list[0].add_field(
                 name="Staff Information",
@@ -332,20 +334,21 @@ class Search(commands.Cog):
         ] or ["NoAlerts"]
 
         magic_flags = {
-            "ERM Team": 1001972346661384302,
-            "ERM Developer": 1046204873496068176,
-            "ERM Management": 1038597868023447552,
-            "ERM Senior Support": 1028848687927013396,
-            "ERM Support": 1053417531278364713,
-            "ERM Staff": 988055417907200010,
-            "ERM Quality Assurance": 1306431506914218067,
+            "ERM Team": 1360421511651135490,
+            "ERM Developer": 1360421511651135490,
+            "ERM Management": 1360421511651135490,
+            "ERM Senior Support": 1360421511651135490,
+            "ERM Support": 1360421511651135490,
+            "ERM Staff": 1360421511651135490,
+            "ERM Quality Assurance": 1360421511651135490,
         }
 
         magic_flags_reverse = {
             v: k for k, v in magic_flags.items()
         }  # this is reverse mapping for quick lookup
 
-        guild_id = 987798554972143728
+        g_id = 965829463512330260
+        
         guild: discord.Guild = bot.get_guild(guild_id)
         applied_flags = set()  # use set to automatically remove duplicates
         member: None | StaffConnection = await bot.staff_connections.fetch_by_spec(
@@ -414,6 +417,8 @@ class Search(commands.Cog):
             value=f"{string}",
             inline=False,
         )
+
+        embed_list[0].set_footer("NOTE: This is for the TESTING version of ERM. Changes do not reflect the user's actual moderation history.")
 
         # # # print(result)
         def add_warning_field(warning):
